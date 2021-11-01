@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* ### Primary */
+
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+
+  /* ### Neutral */
+
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+}
+
+html {
+  width: 100vw;
+  max-width: 1440px;
+  height: 100vh;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1em;
+}
+
+.container {
+  padding: 0 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+
+@media only screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+body {
+  width: 100%;
+  min-width: 375px;
+  min-height: 100%;
+  display: grid;
+  place-content: center;
+  background: url(../img/pattern-background-desktop.svg) center -25vh / cover no-repeat,
+    var(--paleBlue);
+}
+
+main {
+  width: max(30vw, 350px);
+  background-color: var(--veryPaleBlue);
+  border-radius: 1em;
+  overflow: hidden;
+  text-align: center;
+  margin: 2em 0;
+  -webkit-box-shadow: 0px 25px 30px -20px rgb(0 0 0 / 22%);
+  box-shadow: 0px 25px 30px -20px rgb(0 0 0 / 22%);
+}
+
+.hero {
+  width: 100%;
+}
+
+.hero > img {
+  max-width: 100%;
+  display: block;
+}
+
+.pad {
+  padding: 5%;
+}
+
+.header .title {
+  font-weight: 900;
+  font-size: 1.8em;
+  color: var(--darkBlue);
+  padding: 0.5em 0 0 0;
+}
+
+.header .text {
+  /* max-width: 80%; */
+  margin: 0 auto;
+  color: var(--desaturatedBlue);
+  line-height: 1.5em;
+  padding: 6%;
+}
+
+.plan {
+  /* max-width: 80%; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 1.5em auto;
+  padding: 0.5em 0.7em;
+  border-radius: 0.5em;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.plan .music {
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  margin-right: 1em;
+}
+
+.plan .music > img {
+  display: block;
+}
+
+.plan .plan__content h5 {
+  color: var(--darkBlue);
+  margin-bottom: 0.4em;
+}
+
+.plan .plan__content p {
+  color: var(--desaturatedBlue);
+  font-size: 0.8em;
+}
+
+.plan .change__btn {
+  margin-left: auto;
+  background-color: transparent;
+  color: var(--brightBlue);
+  font-weight: 700;
+  font-size: 0.8em;
+  text-decoration: underline;
+  cursor: pointer;
+  border: 0;
+  -webkit-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+.plan .change__btn:hover {
+  opacity: 0.7;
+}
+
+.payment__btn {
+  display: block;
+  width: 100%;
+  padding: 0.6em 0.7em;
+  margin: 1em 0 3em;
+  background-color: var(--brightBlue);
+  color: var(--veryPaleBlue);
+  border: 0;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0 15px 35px -10px var(--darkBlue);
+  box-shadow: 0 15px 35px -10px var(--darkBlue);
+  cursor: pointer;
+  -webkit-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+.payment__btn:hover {
+  opacity: 0.8;
+}
+
+.cancel__btn {
+  background-color: transparent;
+  border: 0;
+  color: var(--desaturatedBlue);
+  cursor: pointer;
+  font-size: 0.9;
+  font-weight: 700;
+  margin-bottom: 1em;
+  -webkit-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.cancel__btn:hover {
+  color: var(--darkBlue);
+}
